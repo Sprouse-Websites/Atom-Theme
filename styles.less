@@ -1,0 +1,340 @@
+/*
+* Your Stylesheet
+*
+* This stylesheet is loaded when Atom starts up and is reloaded automatically
+* when it is changed and saved.
+*
+* Add your own CSS or Less to fully customize Atom.
+* If you are unfamiliar with Less, you can read more about it here:
+* http://lesscss.org
+*/
+
+
+/*
+* Examples
+* (To see them, uncomment and save)
+*/
+
+atom-text-editor {
+	// background color of the code editor section
+	background-color: #000;
+	color: black
+}
+
+atom-dock .tab-bar .tab.active {
+	background-color: #333;
+	color:aqua;
+}
+
+.icon-file-directory::before {
+	font-weight: normal;
+	color: #ffff55;
+}
+
+.icon-file-text::before {
+	font-weight: normal;
+	color: #88f;
+}
+
+.icon-file-media::before {
+	font-weight: normal;
+	color: #8f8;
+}
+
+.selected {
+	background-color: #444;
+}
+
+// Project view
+.tab-bar .tab.active[data-type$="Editor"], .tab-bar .tab.active[data-type$="AboutView"], .tab-bar .tab.active[data-type$="TimecopView"], .tab-bar .tab.active[data-type$="StyleguideView"], .tab-bar .tab.active[data-type="MarkdownPreviewView"] {
+	color: #e5e5e5;
+	background-color: #878787;
+	font-weight: bolder;
+}
+.tab-bar .tab {
+	background-color: #555;
+	color: #eee;
+}
+
+// style the background color of the tree view
+.tree-view {
+	background-color: #444;
+	color: white;
+}
+
+atom-text-editor .gutter {
+	background-color: #111;
+	color: #c6c6c6;
+}
+
+.list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+	font-weight: normal;
+	color:white;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+	color: white;
+	// background-color: hsl(180, 24%, 12%);
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+	border-color: red;
+}
+
+atom-workspace {
+	font-family: Arial;
+}
+
+.atom-hyperlinks{
+	.atom-hyperlinks-item{
+		display: inline-block;
+		margin-top: 5px;
+		margin-right: 7px;
+		width: 15px;
+		height: 15px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		text-decoration: underline;
+	}
+}
+
+// MATLAB
+/*
+Atom styles.less file CSS for syntax coloring of MATLAB language.
+*/
+.syntax--entity.syntax--name.syntax--tag {
+	color: #11f;
+	text-decoration: none;
+}
+
+atom-text-editor.editor {
+	.syntax--source.syntax--matlab, .syntax--source.syntax--octave {
+		.syntax--meta.syntax--variable.syntax--other.syntax--valid.syntax--matlab {
+			color: #fff; //black
+		}
+
+		.syntax--source.syntax--css .syntax--property-name.syntax--support, .syntax--source.syntax--css .syntax--property-value.syntax--support {
+			color: #77f;
+		}
+
+		.syntax--variable.syntax--other.syntax--valid.syntax--octave {
+			color: #fff; //black
+		}
+
+		.syntax--constant.syntax--language,
+		.syntax--constant.syntax--numeric {
+			color: #fff; //black
+		}
+
+		// Strings
+		.syntax--string.syntax--quoted.syntax--single,
+		.syntax--constant.syntax--character.syntax--escape,
+		.syntax--punctuation.syntax--definition.syntax--string.syntax--end,
+		.syntax--punctuation.syntax--definition.syntax--string.syntax--begin {
+			color: #A020F0; // red
+		}
+
+
+
+		// keywords
+		//.syntax--storage.syntax--type.syntax--function.syntax--matlab,
+		.syntax--storage.syntax--type,
+		.syntax--keyword.syntax--control {
+			color: #0000FF; //blue
+			font-weight: normal;
+		}
+
+		// Comments %, %%
+		.syntax--comment.syntax--line.syntax--percentage,
+		.syntax--comment.syntax--line.syntax--double-percentage {
+			color: #228B22; // green
+			font-style: normal;
+
+			.syntax--punctuation.syntax--definition.syntax--comment {
+				color: #228B22; // green
+				font-style: normal;
+			}
+
+			.syntax--storage.syntax--type.syntax--class.syntax--note {
+				color: #228B22; // green
+				font-style: normal;
+			}
+
+			.syntax--storage.syntax--type.syntax--class.syntax--todo {
+				color: #228B22; // green
+				font-style: normal;
+			}
+
+			.syntax--meta.syntax--cell {
+				color: #228B22; // green ... not working
+				font-style: normal;
+			}
+
+			.syntax--markup.syntax--underline.syntax--link {
+				color: #228B22; // green
+			}
+		}
+
+		// Parentheses
+		.syntax--meta.syntax--parens {
+			color: #000000;
+		}
+
+		// function
+		.syntax--meta.syntax--function.syntax--matlab {
+			.syntax--meta.syntax--arguments.syntax--function.syntax--matlab,
+			.syntax--entity.syntax--name.syntax--function.syntax--matlab {
+				color: #fff; //black
+				.syntax--variable.syntax--parameter.syntax--input.syntax--matlab {
+					color: #fff; //black
+				}
+			}
+		}
+
+		.syntax--meta.syntax--function.syntax--without-arguments.syntax--octave {
+			.syntax--entity.syntax--name.syntax--function.syntax--octave {
+				color: #fff; //black
+			}
+		}
+
+		.syntax--support.syntax--function.syntax--octave {
+			color: #fff; //black
+		}
+
+
+		// classdef
+		.syntax--meta.syntax--class.syntax--matlab {
+			.syntax--storage.syntax--type.syntax--function.syntax--matlab {
+				color: #0000FF; //blue
+			}
+
+			.syntax--entity.syntax--name.syntax--section.syntax--class.syntax--matlab,
+			.syntax--meta.syntax--function.syntax--matlab,
+			.syntax--meta.syntax--methods.syntax--matlab {
+				color: #fff; //black
+			}
+
+
+		}
+	}
+}
+
+
+// NAVIGATION MENU
+
+a.icon {
+	color: #fbfbfc;
+}
+
+.icon-file-text::before, .icon-file-directory::before {
+	font-weight: bold;
+	font-size: 13pt;
+	padding-right: 4pt;
+}
+
+.icon-file-text::before:hover, .icon-file-directory::before:hover {
+	font-size: 14pt;
+}
+
+.icon-file-text::before {
+	color: #6d6dff;
+}
+
+.icon-file-directory::before {
+	color: #ffff55;
+}
+
+// SETTINGS
+
+.settings-view .package-card.disabled {
+	background-color: #292929;
+	border-color: red;
+}
+
+.settings-view .package-card .package-description {
+	color: #424243;
+}
+
+.settings-view .section .section-heading {
+	margin-bottom: 1em;
+}
+
+.settings-view section .section-heading, .settings-view .section .section-heading {
+	margin-bottom: 20px;
+	color: #dedfdc;
+}
+
+.settings-view .package-card {
+	padding: 15px;
+	margin-bottom: 10px;
+	list-style-type: none;
+	font-size: 1.2em;
+	border-radius: 6px;
+	border: 1px solid #dbdbdc;
+	background-color: #636464;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-user-select: none;
+	color: #532625;
+}
+
+.package-card.col-lg-8 {
+	color: #fcfdfe;
+}
+
+.settings-view .package-card .package-description {
+	color: #fafbfa;
+}
+
+.settings-view > .panels, atom-pane-container atom-pane .item-views .pane-item {
+	color: #fafaf9;
+	background-color: #1a1a1a;
+}
+
+// SYNTAX
+
+.syntax--comment {
+	color: #ff0000;
+	font-style: italic;
+	font-family: serif;
+}
+
+.syntax--constant.syntax--character.syntax--escape {
+	color: inherit;
+	opacity: 0.6;
+	font-weight: bolder;
+	font-family: monospace;
+}
+
+.syntax--source.syntax--css .syntax--property-name.syntax--support, .syntax--source.syntax--css .syntax--property-value.syntax--support {
+	color: #006d41;
+}
+
+.syntax--constant {
+	color: #1a68ff;
+}
+
+.syntax--entity.syntax--other.syntax--attribute-name {
+	color: #bf8200;
+}
+
+// STATUS BAR
+status-bar a, status-bar a:hover {
+	color: white;
+}
+
+// TITLE BAR
+.title-bar .title {
+	font-size: 11pt;
+}
+
+// UNCATEGORISED
+.btn, .btn.btn-default {
+	color: #cbcdd0;
+	text-shadow: none;
+	border: 1px solid #1e1e1f;
+	background-color: #424243;
+	background-image: linear-gradient(#6d6d6f, #575758);
+}

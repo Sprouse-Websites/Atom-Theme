@@ -1,0 +1,33 @@
+"*":
+  "autocomplete-plus": {}
+  core:
+    disabledPackages: [
+      "drunken-php"
+      "php-debug"
+      "sync-sync"
+      "dalek"
+      "deprecation-cop"
+      "fuzzy-finder"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "one-light-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    atomicSoftTabs: false
+    fontSize: 22
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+    tabType: "hard"
+  "exception-reporting":
+    userId: "e9243d07-60e2-4dc4-8eb2-08cce2cad361"
+  github:
+    sourceRemoteName: "master"
+  "php-debug":
+    showWelcome: false
+  "spell-check": {}
+  welcome:
+    showOnStartup: false

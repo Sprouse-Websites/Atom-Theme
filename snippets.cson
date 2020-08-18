@@ -1,0 +1,53 @@
+'.text.html.basic, .text.html.php, .source.php':
+	'webdoc':
+		'prefix': 'webdoc'
+		'body': """<!DOCTYPE html>\n<html>\n<head>\n<title></title>\n</head>\n\n<body>\n\n<script>\n\n</script>\n</body>\n</html>"""
+
+	'table':
+		'prefix': 'table'
+		'body': """<table>\n<tr>\n<td></td>\n</tr>\n</table>"""
+
+	'icon':
+		'prefix': 'icon'
+		'body': """<link rel="icon" href="media/icon.png">"""
+
+	'Auto Refresh':
+		'prefix': 'auto-refresh'
+		'body': """<meta http-equiv="refresh" content="5">"""
+
+	'A Link in New Tab':
+		'prefix': 'a blank'
+		'body':'<a href="_blank"></a>'
+
+	'JS Script':
+		'prefix': 'script'
+		'body': """<script type="text/javascript">
+		${1}
+		</script>"""
+
+	'JS Script With External Source':
+		'prefix': 'scriptsrc'
+		'body': """<script type="text/javascript" src="">
+		${1}
+		</script>"""
+
+	'Console Log':
+		'prefix': 'log'
+		'body': """<script type="text/javascript">
+		${1}
+		</script>"""
+
+	'div':
+	  'prefix': 'div'
+	  'body': """<div id="" class="" style="">
+			${1}
+		</div>"""
+
+'.source.coffee':
+	'Console log':
+		'prefix': 'log'
+		'body': "console.log $1"
+
+  'Cursor Location':
+    'prefix': 'cursor'
+    'body': '$'
